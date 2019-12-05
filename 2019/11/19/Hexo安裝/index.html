@@ -5,16 +5,16 @@
   
 
   
-  <title>Hexo 安裝 | RayJi Blog</title>
+  <title>Hexo | RayJi Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="想創建一個blog，快使用hexo吧! hexo優點1.搭配github免費架站2.可搭配git直接publish到github上3.不用處理瑣碎html代碼4.完全客製化你想要的blog，不再受限各種blog網站 安裝nodejshttps:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;按照步驟安裝完成後，輸入命令確認安裝是否正確 1node -v  安裝githttps:&#x2F;&#x2F;git-scm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 安裝">
+<meta property="og:title" content="Hexo">
 <meta property="og:url" content="https:&#x2F;&#x2F;rayji0428.github.io&#x2F;2019&#x2F;11&#x2F;19&#x2F;Hexo%E5%AE%89%E8%A3%9D&#x2F;index.html">
 <meta property="og:site_name" content="RayJi Blog">
 <meta property="og:description" content="想創建一個blog，快使用hexo吧! hexo優點1.搭配github免費架站2.可搭配git直接publish到github上3.不用處理瑣碎html代碼4.完全客製化你想要的blog，不再受限各種blog網站 安裝nodejshttps:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;download&#x2F;按照步驟安裝完成後，輸入命令確認安裝是否正確 1node -v  安裝githttps:&#x2F;&#x2F;git-scm">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-19T15:34:54.585Z">
+<meta property="og:updated_time" content="2019-12-05T15:25:49.548Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="RayJi Blog" type="application/atom+xml">
@@ -69,7 +69,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Cat1/">Cat1</a>
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
   </div>
 
   </div>
@@ -80,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo 安裝
+      Hexo
     </h1>
   
 
@@ -94,12 +94,33 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 
 <p>安裝git<br><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a><br>按照步驟安裝完成後，輸入命令確認安裝是否正確<br>git version</p>
-<p>安裝hexo<br>npm install hexo -g</p>
+<p>安裝hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
+
+<p>建置專案</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>啟動server</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>設定git</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/MyAccount/MyAccount.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message: </span><br></pre></td></tr></table></figure>
+
+<p>生成新文章</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My Post&quot;</span><br><span class="line">hexo new draft &quot;My Draft&quot;</span><br></pre></td></tr></table></figure>
+
+<p>問題紀錄:<br>vsCode使用powershell輸入指令”hexo server”發生問題，改用cmd輸入正常<br>youtube如何設定大小</p>
+<p>參考網站:<br><a href="https://yaoandy107.github.io/hexo-tutorial/" target="_blank" rel="noopener">https://yaoandy107.github.io/hexo-tutorial/</a><br><a href="https://hexo.io/zh-tw/docs/" target="_blank" rel="noopener">https://hexo.io/zh-tw/docs/</a></p>
+<p>Hexo教學影片:</p>
+<a href="https://youtu.be/Kt7u5kr_P5o" title="" target="">英文教學影片</a>
+<a href="https://youtu.be/PsXWbI2Mqu0" title="" target="">中文教學影片</a>
+
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://rayji0428.github.io/2019/11/19/Hexo%E5%AE%89%E8%A3%9D/" data-id="ck360asz90005moegf1cjdkzk" class="article-share-link">Share</a>
+      <a data-url="https://rayji0428.github.io/2019/11/19/Hexo%E5%AE%89%E8%A3%9D/" data-id="ck3svmco0000688eghpam9ei4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -107,15 +128,6 @@
   
     
 <nav id="article-nav">
-  
-    <a href="/2019/11/19/HexoLS2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          HexoLS2
-        
-      </div>
-    </a>
   
   
     <a href="/2019/11/19/Test1/" id="article-nav-older" class="article-nav-link-wrap">
@@ -136,7 +148,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Cat1/">Cat1</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li></ul>
     </div>
   </div>
 
@@ -164,11 +176,7 @@
       <ul>
         
           <li>
-            <a href="/2019/11/19/HexoLS2/">HexoLS2</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/19/Hexo%E5%AE%89%E8%A3%9D/">Hexo 安裝</a>
+            <a href="/2019/11/19/Hexo%E5%AE%89%E8%A3%9D/">Hexo</a>
           </li>
         
           <li>
