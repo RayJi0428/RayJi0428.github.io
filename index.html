@@ -122,18 +122,18 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原題<br><a href="https://leetcode.com/problems/zigzag-conversion/" target="_blank" rel="noopener">https://leetcode.com/problems/zigzag-conversion/</a></p>
-<p>目標設計一個convert function將輸入字串以И(反N)形狀排列後，再以列向右依序取出最後回傳。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> convert = <span class="function"><span class="keyword">function</span> (<span class="params">s, numRows</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//s:輸入字串</span></span><br><span class="line">    <span class="comment">//numRows:指定列數</span></span><br><span class="line">&#125;</span><br><span class="line">------------------------------------------</span><br><span class="line">Example <span class="number">1</span>:</span><br><span class="line">Input: s = <span class="string">"PAYPALISHIRING"</span>, numRows = <span class="number">3</span></span><br><span class="line">Output: <span class="string">"PAHNAPLSIIGYIR"</span></span><br><span class="line">Explanation:</span><br><span class="line">P   A   H   N</span><br><span class="line">A P L S I I G</span><br><span class="line">Y   I   R</span><br><span class="line">------------------------------------------</span><br><span class="line">Example <span class="number">2</span>:</span><br><span class="line">Input: s = <span class="string">"PAYPALISHIRING"</span>, numRows = <span class="number">4</span></span><br><span class="line">Output: <span class="string">"PINALSIGYAHRPI"</span></span><br><span class="line">Explanation:</span><br><span class="line">P     I    N</span><br><span class="line">A   L S  I G</span><br><span class="line">Y A   H R</span><br><span class="line">P     I</span><br></pre></td></tr></table></figure>
+        
 
-<p>研究了兩天整理出以下推導公式再依續以列尋找，但要特別排除首列、末列找到重複idx問題</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>	 	<span class="number">4</span>	 	<span class="number">8</span></span><br><span class="line"><span class="number">1</span>	<span class="number">3</span>	<span class="number">5</span>	<span class="number">7</span>	<span class="number">9</span></span><br><span class="line"><span class="number">2</span>    	<span class="number">6</span>	 	<span class="number">10</span></span><br><span class="line"></span><br><span class="line">gap = <span class="number">3</span> * <span class="number">2</span> - <span class="number">2</span> = <span class="number">4</span>;</span><br><span class="line">r0 = <span class="number">0</span>+<span class="number">4</span>*<span class="number">0</span>(<span class="number">0</span>), (<span class="number">4</span><span class="number">-0</span>)+<span class="number">4</span>*<span class="number">0</span>(<span class="number">4</span>), <span class="number">0</span>+<span class="number">4</span>*<span class="number">1</span>(<span class="number">4</span>), (<span class="number">4</span><span class="number">-0</span>)+<span class="number">4</span>*<span class="number">1</span>(<span class="number">8</span>), <span class="number">0</span>+<span class="number">4</span>*<span class="number">2</span>(<span class="number">8</span>)...</span><br><span class="line">r1 = <span class="number">1</span>+<span class="number">4</span>*<span class="number">0</span>(<span class="number">1</span>), (<span class="number">4</span><span class="number">-1</span>)+<span class="number">4</span>*<span class="number">0</span>(<span class="number">3</span>), <span class="number">1</span>+<span class="number">4</span>*<span class="number">1</span>(<span class="number">5</span>), (<span class="number">4</span><span class="number">-1</span>)+<span class="number">4</span>*<span class="number">1</span>(<span class="number">7</span>), <span class="number">1</span>+<span class="number">4</span>*<span class="number">2</span>(<span class="number">9</span>)...</span><br><span class="line">r2 = <span class="number">2</span>+<span class="number">4</span>*<span class="number">0</span>(<span class="number">2</span>), (<span class="number">4</span><span class="number">-2</span>)+<span class="number">4</span>*<span class="number">0</span>(<span class="number">2</span>), <span class="number">2</span>+<span class="number">4</span>*<span class="number">1</span>(<span class="number">6</span>), (<span class="number">4</span><span class="number">-2</span>)+<span class="number">4</span>*<span class="number">1</span>(<span class="number">6</span>), <span class="number">2</span>+<span class="number">4</span>*<span class="number">2</span>(<span class="number">10</span>), (<span class="number">4</span><span class="number">-2</span>)+<span class="number">4</span>*<span class="number">2</span>(<span class="number">10</span>)...</span><br><span class="line">ri = r + gap * idx, (gap - r) + gap * idx ...</span><br></pre></td></tr></table></figure>
+          
+          <div class="entry-summary">
+          原題https://leetcode.com/problems/zigzag-conversion/
+目標設計一個convert function將輸入字串以И(反N)形狀排列後，再以列向右依序取出最後回傳。
 
-<p>最後附上原碼</p>
-<figure class="highlight javascript"><figcaption><span>[ZigZagConversion] []</span><a href="/downloads/code/LeetCode-6-ZigZagConversion.js">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param {string} s</span></span><br><span class="line"><span class="comment"> * @param {number} numRows</span></span><br><span class="line"><span class="comment"> * @return {string}</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> convert = <span class="function"><span class="keyword">function</span> (<span class="params">s, numRows</span>) </span>{</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> gap = <span class="built_in">Math</span>.max(numRows * <span class="number">2</span> - <span class="number">2</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> idxList = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> ri = <span class="number">0</span>; ri &lt; numRows; ++ri) {</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> idx = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">let</span> p1 = ri + gap * idx;</span><br><span class="line">        <span class="keyword">let</span> p2 = (gap - ri) + gap * idx;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) {</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (!s.charAt(p1))</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (idxList.indexOf(p1) == <span class="number">-1</span>) {</span><br><span class="line">                idxList.push(p1);</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (!s.charAt(p2))</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (idxList.indexOf(p2) == <span class="number">-1</span>) {</span><br><span class="line">                idxList.push(p2);</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            idx++;</span><br><span class="line">            p1 = ri + gap * idx;</span><br><span class="line">            p2 = (gap - ri) + gap * idx;</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        p1 += gap;</span><br><span class="line">        p2 += gap;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = <span class="string">""</span>;</span><br><span class="line">    idxList.forEach(<span class="function">(<span class="params">v</span>) =&gt;</span> {</span><br><span class="line">        result += s.charAt(v);</span><br><span class="line">    });</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//Testcase</span></span><br><span class="line"><span class="built_in">console</span>.log(convert(<span class="string">"PAYPALISHIRING"</span>, <span class="number">1</span>) == <span class="string">"PAYPALISHIRING"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(convert(<span class="string">"PAYPALISHIRING"</span>, <span class="number">2</span>) == <span class="string">"PYAIHRNAPLSIIG"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(convert(<span class="string">"PAYPALISHIRING"</span>, <span class="number">3</span>) == <span class="string">"PAHNAPLSIIGYIR"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(convert(<span class="string">"PAYPALISHIRING"</span>, <span class="number">4</span>) == <span class="string">"PINALSIGYAHRPI"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> Runtime: 116 ms, faster than 23.99% of JavaScript online submissions for ZigZag Conversion.</span></span><br><span class="line"><span class="comment"> Memory Usage: 41.2 MB, less than 61.11% of JavaScript online submissions for ZigZag Conversion.</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-<p>結論:<br>跑起來效能一般，看了比較優秀的寫法是用類似方向的方式，走到首列或最末列才轉向，不過還沒徹底了解，先這樣吧</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2019/12/15/leetcode/LeetCode-6-ZigZagConversion/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -314,39 +314,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>想創建一個blog，快使用hexo吧!</p>
-<p>hexo優點<br>1.搭配github免費架站<br>2.可搭配git直接publish到github上<br>3.不用處理瑣碎html代碼<br>4.完全客製化你想要的blog，不再受限各種blog網站</p>
-<p>安裝nodejs<br><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a><br>按照步驟安裝完成後，輸入命令確認安裝是否正確</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+        
 
-<p>安裝git<br><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a><br>按照步驟安裝完成後，輸入命令確認安裝是否正確<br>git version</p>
-<p>安裝hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
+          
+          <div class="entry-summary">
+          想創建一個blog，快使用hexo吧!
 
-<p>建置專案</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>啟動server</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>設定git</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/MyAccount/MyAccount.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message: </span><br></pre></td></tr></table></figure>
-
-<p>生成新文章</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;My Post&quot;</span><br><span class="line">hexo new draft &quot;My Draft&quot;</span><br></pre></td></tr></table></figure>
-
-<p>發布</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-
-<p>問題紀錄:<br>vsCode使用powershell輸入指令”hexo server”發生問題，改用cmd輸入正常<br>youtube如何設定大小</p>
-<p>參考網站:<br><a href="https://yaoandy107.github.io/hexo-tutorial/" target="_blank" rel="noopener">https://yaoandy107.github.io/hexo-tutorial/</a><br><a href="https://hexo.io/zh-tw/docs/" target="_blank" rel="noopener">https://hexo.io/zh-tw/docs/</a></p>
-<p>Hexo教學影片:</p>
-<a href="https://youtu.be/Kt7u5kr_P5o" title="" target="">英文教學影片</a>
-<a href="https://youtu.be/PsXWbI2Mqu0" title="" target="">中文教學影片</a>
-
-
-
+        
+          <p class="article-more-link">
+            <a href="/2019/11/19/Hexo%E5%AE%89%E8%A3%9D/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -434,20 +412,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+          
+          <div class="entry-summary">
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2019/11/19/hello-world/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
