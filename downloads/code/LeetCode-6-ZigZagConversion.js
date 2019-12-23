@@ -53,8 +53,3 @@ console.log(convert("PAYPALISHIRING", 1) == "PAYPALISHIRING");
 console.log(convert("PAYPALISHIRING", 2) == "PYAIHRNAPLSIIG");
 console.log(convert("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR");
 console.log(convert("PAYPALISHIRING", 4) == "PINALSIGYAHRPI");
-
-/*
- Runtime: 116 ms, faster than 23.99% of JavaScript online submissions for ZigZag Conversion.
- Memory Usage: 41.2 MB, less than 61.11% of JavaScript online submissions for ZigZag Conversion.
- */
