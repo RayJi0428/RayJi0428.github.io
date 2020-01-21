@@ -97,6 +97,65 @@
         
           <section id="main">
   
+    <article id="post-python/python-0"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/01/21/python/python-0/">Python 基礎</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/01/21/python/python-0/" class="article-date">
+	  <time datetime="2020-01-21T12:55:17.000Z" itemprop="datePublished">January 21, 2020</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="宣告"><a href="#宣告" class="headerlink" title="宣告"></a>宣告</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#變數</span></span><br><span class="line">VALUE = <span class="number">10</span>      <span class="comment">#10 / 10.0 / "A" / None</span></span><br><span class="line">BOOLEAN = <span class="literal">True</span>  <span class="comment">#True / False</span></span><br><span class="line">LIST = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myFun</span><span class="params">(v)</span>:</span></span><br><span class="line">    print(v)</span><br></pre></td></tr></table></figure>
+
+<h3 id="運算子"><a href="#運算子" class="headerlink" title="運算子"></a>運算子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">**      <span class="comment">#指標 (2 ** 3 = 8)</span></span><br><span class="line">%       <span class="comment">#餘數 (22 % 8 = 6)</span></span><br><span class="line">//      <span class="comment">#整除 (22 // 8 = 2)</span></span><br><span class="line">+-*/    <span class="comment">#正常用法</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="比較運算子"><a href="#比較運算子" class="headerlink" title="比較運算子"></a>比較運算子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">42</span> &lt; <span class="number">100</span>        <span class="comment">#True</span></span><br><span class="line"><span class="literal">True</span> <span class="keyword">and</span> <span class="literal">False</span>  <span class="comment">#False</span></span><br><span class="line"><span class="literal">True</span> <span class="keyword">or</span> <span class="literal">False</span>   <span class="comment">#True</span></span><br><span class="line"><span class="keyword">not</span> <span class="literal">True</span>        <span class="comment">#False</span></span><br><span class="line"><span class="keyword">not</span> <span class="keyword">not</span> <span class="literal">True</span>    <span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#if-elseif-else</span></span><br><span class="line"><span class="keyword">if</span> a == <span class="number">1</span>:</span><br><span class="line">    print(<span class="string">"1"</span>)</span><br><span class="line"><span class="keyword">elif</span> a == <span class="number">2</span>:</span><br><span class="line">    print(<span class="string">"2"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">"3"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#while</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">if</span> a == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">elif</span> a == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">print(<span class="string">"end while"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#for loop</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):      <span class="comment">#0 ~ 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>,<span class="number">10</span>):   <span class="comment">#5 ~ 9</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>,<span class="number">10</span>,<span class="number">2</span>): <span class="comment">#5, 7, 9</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>,<span class="number">-1</span>,<span class="number">-1</span>):<span class="comment">#5 ~ 0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函式"><a href="#函式" class="headerlink" title="函式"></a>函式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print()                 <span class="comment">#console</span></span><br><span class="line">input()                 <span class="comment">#等待輸入文字並按下Enter</span></span><br><span class="line">len()                   <span class="comment">#計算字元個數</span></span><br><span class="line">str(),int(),float()     <span class="comment">#型別轉換</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="import-模組"><a href="#import-模組" class="headerlink" title="import 模組"></a>import 模組</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">random  <span class="comment">#隨機亂數</span></span><br><span class="line">math    <span class="comment">#數學</span></span><br><span class="line">sys     <span class="comment">#系統</span></span><br><span class="line">os      <span class="comment">#os</span></span><br></pre></td></tr></table></figure>
+
+<p>#global</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">spam</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> eggs</span><br><span class="line">    eggs = <span class="string">'spam'</span></span><br><span class="line">eggs = <span class="string">'global'</span></span><br><span class="line">spam()</span><br><span class="line">print(eggs) <span class="comment">#spam</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="陣列"><a href="#陣列" class="headerlink" title="陣列"></a>陣列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LIST = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>]</span><br><span class="line">LIST[<span class="number">0</span>]             <span class="comment">#a</span></span><br><span class="line">LIST[<span class="number">-1</span>]            <span class="comment">#c</span></span><br><span class="line">LIST[<span class="number">1</span>:<span class="number">3</span>]           <span class="comment">#['b','c']</span></span><br><span class="line">len(LIST)           <span class="comment">#4</span></span><br><span class="line"><span class="keyword">del</span> LIST[<span class="number">0</span>]         <span class="comment">#LIST = ['b','c','d']</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> LIST:      </span><br><span class="line">    print(i)        <span class="comment">#a,b,c,d</span></span><br><span class="line"><span class="string">'a'</span> <span class="keyword">in</span> LIST         <span class="comment">#True</span></span><br><span class="line"><span class="string">'a'</span> <span class="keyword">not</span> <span class="keyword">in</span> LIST     <span class="comment">#False</span></span><br><span class="line">LIST.index(<span class="string">'b'</span>)     <span class="comment">#1</span></span><br><span class="line">LIST.append(<span class="string">'e'</span>)    <span class="comment">#LIST = ['a','b','c','d','e']</span></span><br><span class="line">LIST.insert(<span class="number">1</span>,<span class="string">'x'</span>)  <span class="comment">#LIST = ['a','x','b','c','d']</span></span><br><span class="line">LIST.remove(<span class="string">'a'</span>)    <span class="comment">#LIST = ['b','c','d']</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-math/Quaternion"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -550,50 +609,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-Test1"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/11/19/Test1/">Test1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/11/19/Test1/" class="article-date">
-	  <time datetime="2019-11-18T17:33:39.000Z" itemprop="datePublished">November 19, 2019</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>some content asd</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/MBOa-2b4uQQ" frameborder="0" allowfullscreen></iframe></div>
-
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
@@ -689,6 +704,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2020/01/21/python/python-0/">Python 基礎</a></h6>
+              <span>January 21, 2020</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/12/25/math/Quaternion/">Quaternion</a></h6>
               <span>December 25, 2019</span>
             </div>
@@ -743,18 +770,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/12/13/EgretThai/">EgretThai</a></h6>
-              <span>December 13, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -767,7 +782,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Egret/" rel="tag">Egret</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJS/" rel="tag">NodeJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Egret/" rel="tag">Egret</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJS/" rel="tag">NodeJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -777,7 +792,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Egret/" style="font-size: 10px;">Egret</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a>
+      <a href="/tags/Egret/" style="font-size: 10px;">Egret</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/NodeJS/" style="font-size: 10px;">NodeJS</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
     </div>
   </div>
 
@@ -787,7 +802,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -812,7 +827,7 @@
 
   <div class="clearfix container">
       <div class="site-info">
-	      &copy; 2019 RayJi Blog All Rights Reserved.
+	      &copy; 2020 RayJi Blog All Rights Reserved.
         
             <span id="busuanzi_container_site_uv">
               本站访客数<span id="busuanzi_value_site_uv"></span>人次  
