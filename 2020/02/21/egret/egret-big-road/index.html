@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>egret-big-road | RayJi Blog</title>
+  <title>Egret-大路模擬器 | RayJi Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="egret" />
+  <meta name="keywords" content="Egret" />
   
   
   
   
-  <meta name="description" content="https:&#x2F;&#x2F;github.com&#x2F;RayJi0428&#x2F;egret-big-road">
-<meta name="keywords" content="egret">
+  <meta name="description" content="使用Egret練習大路模擬器">
+<meta name="keywords" content="Egret">
 <meta property="og:type" content="article">
-<meta property="og:title" content="egret-big-road">
+<meta property="og:title" content="Egret-大路模擬器">
 <meta property="og:url" content="https:&#x2F;&#x2F;rayji0428.github.io&#x2F;2020&#x2F;02&#x2F;21&#x2F;egret&#x2F;egret-big-road&#x2F;index.html">
 <meta property="og:site_name" content="RayJi Blog">
-<meta property="og:description" content="https:&#x2F;&#x2F;github.com&#x2F;RayJi0428&#x2F;egret-big-road">
+<meta property="og:description" content="使用Egret練習大路模擬器">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-21T04:29:24.226Z">
+<meta property="og:updated_time" content="2020-02-23T15:35:29.343Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="RayJi Blog" type="application/atom+xml">
@@ -109,7 +109,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      egret-big-road
+      Egret-大路模擬器
     </h1>
   
 
@@ -130,17 +130,30 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <iframe src="https://rayji0428.github.io/ray" width="550" height="150" frameborder="0" allowfullscreen></iframe>
-<p><a href="https://github.com/RayJi0428/egret-big-road" target="_blank" rel="noopener">https://github.com/RayJi0428/egret-big-road</a></p>
-<!-- <iframe src="http://localhost:4000/ray" width="[400]" height="[300]" frameborder="0" allowfullscreen></iframe> -->
-<!-- <iframe src="https://rayji0428.github.io/ray" width="[400]" height="[300]" frameborder="0" allowfullscreen></iframe> -->
+        <p>使用Egret練習大路模擬器</p>
+<a id="more"></a>
+<iframe src="https://rayji0428.github.io/ray/egret/big-road" width="400" height="300" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe src="http://localhost:4000/ray/egret/big-road" width="400" height="300" frameborder="0" allowfullscreen></iframe> -->
+<h5 id="原始碼"><a href="#原始碼" class="headerlink" title="原始碼"></a>原始碼</h5><p><a href="https://github.com/RayJi0428/egret-big-road" target="_blank" rel="noopener">https://github.com/RayJi0428/egret-big-road</a></p>
+<h5 id="使用說明"><a href="#使用說明" class="headerlink" title="使用說明"></a>使用說明</h5><p>在輸入框填入目標大路UI欄、列長度，點擊Play按鈕生成介面。後續點『單』、『雙』按鈕演示路單。</p>
+<h5 id="演示規則"><a href="#演示規則" class="headerlink" title="演示規則"></a>演示規則</h5><ul>
+<li>不同色，換欄</li>
+<li>同色，超過邊界或下方已有其他路子，轉向</li>
+<li>轉向後，源頭到尾巴的路子都必須畫線(注意轉角處)</li>
+<li>最右欄永遠保持空</li>
+<li><font color=#ff0000>特殊規則(與一般大路不同):最新歷史紀錄必須永遠在畫面內(一般大路有可能因為其他列過長，導致最新紀錄在畫面外…)</font></li>
+</ul>
+<h5 id="作法簡介"><a href="#作法簡介" class="headerlink" title="作法簡介"></a>作法簡介</h5><p>　　想用最直接易懂的方式寫出來，一開始先在場上佈滿所有顯示元件，然後將一維陣列的『結果』轉換為二維陣列『顯示資料』，可以清楚知道每一欄列內容為何。當超過顯示上限時，就把多餘的欄位資料直接剔除。等顯示資料都準備好後，再一次繪製到畫面上。</p>
+<p>　　過程最卡的是畫線，線段的繪製要考量其他方位內容，才知道要畫『直線』、『橫線』或『轉角』。而且畫線會跟砍資料有關，如果Ｌ線源頭已經被砍，下面殘留的路子線段必須呈現『橫線』，暫時沒想到好方法，所以直接預設『橫線』，檢測後才變成其他線段樣式…</p>
+<h5 id="心路歷程"><a href="#心路歷程" class="headerlink" title="心路歷程"></a>心路歷程</h5><p>沒找到完整演算法，F12查看別人的代碼也很混亂，所以自己用Egret練習了一次大路的演示方法，提供有緣人參考，也自己留個學習紀錄。</p>
+
       
     </div>
     <footer class="entry-meta entry-footer">
       
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/egret/" rel="tag">egret</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Egret/" rel="tag">Egret</a></li></ul>
 
       
         
@@ -195,7 +208,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav">None</ol>
+      <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#原始碼"><span class="nav-number">1.</span> <span class="nav-text">原始碼</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用說明"><span class="nav-number">2.</span> <span class="nav-text">使用說明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#演示規則"><span class="nav-number">3.</span> <span class="nav-text">演示規則</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#作法簡介"><span class="nav-number">4.</span> <span class="nav-text">作法簡介</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#心路歷程"><span class="nav-number">5.</span> <span class="nav-text">心路歷程</span></a></li></ol>
     
     </div>
   </aside>

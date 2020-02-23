@@ -6,9 +6,12 @@
 		"js/assetsmanager.min_2ef412b7.js",
 		"js/game.min_16249d0f.js",
 		"js/tween.min_6c5a88f9.js",
-		"js/promise.min_83a6a5d.js"
+		"js/promise.min_83a6a5d.js",
+		"js/WXCloudApi.min_ee8270d4.js",
+		"js/egretmgobe.min_3490453c.js"
 	],
 	"game": [
-		"js/main.min_26051aa5.js"
+		"js/default.thm_84156d94.js",
+		"js/main.min_7dd49301.js"
 	]
 }
