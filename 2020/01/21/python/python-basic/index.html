@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="RayJi Blog">
 <meta property="og:description" content="紀錄python基礎語法">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-27T04:50:36.006Z">
+<meta property="og:updated_time" content="2020-04-11T11:11:19.731Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="RayJi Blog" type="application/atom+xml">
@@ -85,8 +85,6 @@
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
-                    
               </ul>
             </div>
           </nav>
@@ -151,6 +149,10 @@
 <h3 id="陣列"><a href="#陣列" class="headerlink" title="陣列"></a>陣列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LIST = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>]</span><br><span class="line">LIST[<span class="number">0</span>]             <span class="comment">#a</span></span><br><span class="line">LIST[<span class="number">-1</span>]            <span class="comment">#c</span></span><br><span class="line">LIST[<span class="number">1</span>:<span class="number">3</span>]           <span class="comment">#['b','c']</span></span><br><span class="line">len(LIST)           <span class="comment">#4</span></span><br><span class="line"><span class="keyword">del</span> LIST[<span class="number">0</span>]         <span class="comment">#LIST = ['b','c','d']</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> LIST:      </span><br><span class="line">    print(i)        <span class="comment">#a,b,c,d</span></span><br><span class="line"><span class="string">'a'</span> <span class="keyword">in</span> LIST         <span class="comment">#True</span></span><br><span class="line"><span class="string">'a'</span> <span class="keyword">not</span> <span class="keyword">in</span> LIST     <span class="comment">#False</span></span><br><span class="line">LIST.index(<span class="string">'b'</span>)     <span class="comment">#1</span></span><br><span class="line">LIST.append(<span class="string">'e'</span>)    <span class="comment">#LIST = ['a','b','c','d','e']</span></span><br><span class="line">LIST.insert(<span class="number">1</span>,<span class="string">'x'</span>)  <span class="comment">#LIST = ['a','x','b','c','d']</span></span><br><span class="line">LIST.remove(<span class="string">'a'</span>)    <span class="comment">#LIST = ['b','c','d']</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DICT = &#123;<span class="string">'key'</span>:<span class="string">'value'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> DICT.values():</span><br><span class="line">    print(v)<span class="comment">#value</span></span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> DICT.values():</span><br><span class="line">    print(v)<span class="comment">#key</span></span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> DICT.items():</span><br><span class="line">    print(v)<span class="comment">#('key','value')</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="try…catch"><a href="#try…catch" class="headerlink" title="try…catch"></a>try…catch</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> </span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">raise</span> Exception(<span class="string">'This is this error message.'</span>)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(traceback.format_exc())</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -221,7 +223,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#宣告"><span class="nav-number">1.</span> <span class="nav-text">宣告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#運算子"><span class="nav-number">2.</span> <span class="nav-text">運算子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比較運算子"><span class="nav-number">3.</span> <span class="nav-text">比較運算子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流程控制"><span class="nav-number">4.</span> <span class="nav-text">流程控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函式"><span class="nav-number">5.</span> <span class="nav-text">函式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import-模組"><span class="nav-number">6.</span> <span class="nav-text">import 模組</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#陣列"><span class="nav-number">7.</span> <span class="nav-text">陣列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典"><span class="nav-number">8.</span> <span class="nav-text">字典</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#宣告"><span class="nav-number">1.</span> <span class="nav-text">宣告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#運算子"><span class="nav-number">2.</span> <span class="nav-text">運算子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比較運算子"><span class="nav-number">3.</span> <span class="nav-text">比較運算子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流程控制"><span class="nav-number">4.</span> <span class="nav-text">流程控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函式"><span class="nav-number">5.</span> <span class="nav-text">函式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import-模組"><span class="nav-number">6.</span> <span class="nav-text">import 模組</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#陣列"><span class="nav-number">7.</span> <span class="nav-text">陣列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典"><span class="nav-number">8.</span> <span class="nav-text">字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try…catch"><span class="nav-number">9.</span> <span class="nav-text">try…catch</span></a></li></ol>
     
     </div>
   </aside>
@@ -235,8 +237,6 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
   
 </nav> -->
     <footer id="footer" class="site-footer">

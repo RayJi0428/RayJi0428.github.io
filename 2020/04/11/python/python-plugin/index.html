@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Python 字串 | RayJi Blog</title>
+  <title>Python 套件 | RayJi Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="python" />
@@ -11,15 +11,15 @@
   
   
   
-  <meta name="description" content="python字串基礎用法">
+  <meta name="description" content="常用套件紀錄">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 字串">
-<meta property="og:url" content="https:&#x2F;&#x2F;rayji0428.github.io&#x2F;2020&#x2F;01&#x2F;27&#x2F;python&#x2F;python-string&#x2F;index.html">
+<meta property="og:title" content="Python 套件">
+<meta property="og:url" content="https:&#x2F;&#x2F;rayji0428.github.io&#x2F;2020&#x2F;04&#x2F;11&#x2F;python&#x2F;python-plugin&#x2F;index.html">
 <meta property="og:site_name" content="RayJi Blog">
-<meta property="og:description" content="python字串基礎用法">
+<meta property="og:description" content="常用套件紀錄">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-27T04:48:55.480Z">
+<meta property="og:updated_time" content="2020-04-11T12:01:12.980Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="RayJi Blog" type="application/atom+xml">
@@ -99,7 +99,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-python/python-string" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-python/python-plugin" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -107,7 +107,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      Python 字串
+      Python 套件
     </h1>
   
 
@@ -115,8 +115,8 @@
     
     <div class="article-meta">
       
-	<a href="/2020/01/27/python/python-string/" class="article-date">
-	  <time datetime="2020-01-27T04:19:59.000Z" itemprop="datePublished">January 27, 2020</time>
+	<a href="/2020/04/11/python/python-plugin/" class="article-date">
+	  <time datetime="2020-04-11T12:00:00.000Z" itemprop="datePublished">April 11, 2020</time>
 	</a>
 
        
@@ -128,18 +128,27 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>python字串基礎用法</p>
+        <p>常用套件紀錄</p>
 <a id="more"></a>
 
-<h5 id="多行字串"><a href="#多行字串" class="headerlink" title="多行字串"></a>多行字串</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">多行字串</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="安裝套件"><a href="#安裝套件" class="headerlink" title="安裝套件"></a>安裝套件</h3><p>找到pip.exe並建立到環境變數Path中<br>cmd輸入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install &apos;module name&apos;</span><br></pre></td></tr></table></figure>
 
-<h5 id="多行註解"><a href="#多行註解" class="headerlink" title="多行註解"></a>多行註解</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">多行註解</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<h3 id="檔案控制"><a href="#檔案控制" class="headerlink" title="檔案控制"></a>檔案控制</h3><h4 id="os"><a href="#os" class="headerlink" title="os"></a>os</h4><figure class="highlight python"><figcaption><span>os</span><a href="https://docs.python.org/3/library/os.html" target="_blank" rel="noopener">官方說明文件</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">token = os.environ[<span class="string">"KEY"</span>]<span class="comment">#取得環境變數</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="substr"><a href="#substr" class="headerlink" title="substr"></a>substr</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STR = <span class="string">'hello world!'</span></span><br><span class="line">STR[<span class="number">0</span>:<span class="number">5</span>]<span class="comment">#hello</span></span><br></pre></td></tr></table></figure>
+<h4 id="pyperclip"><a href="#pyperclip" class="headerlink" title="pyperclip"></a>pyperclip</h4><figure class="highlight python"><figcaption><span>剪貼簿</span><a href="https://github.com/asweigart/pyperclip" target="_blank" rel="noopener">官方說明文件</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pyperclip</span><br><span class="line">pyperclip copy(<span class="string">'str'</span>)   <span class="comment">#複製到剪貼簿</span></span><br><span class="line">pyperclip paste()       <span class="comment">#從剪貼簿貼上</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="in-not-in"><a href="#in-not-in" class="headerlink" title="in, not in"></a>in, not in</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">STR = <span class="string">'hello world!'</span></span><br><span class="line"><span class="string">'hello'</span> <span class="keyword">in</span> STR <span class="comment">#True</span></span><br><span class="line"><span class="string">'Hello'</span> <span class="keyword">in</span> STR <span class="comment">#False</span></span><br></pre></td></tr></table></figure>
+<h4 id="codecs"><a href="#codecs" class="headerlink" title="codecs"></a>codecs</h4><figure class="highlight python"><figcaption><span>讀寫檔案</span><a href="https://core-api.github.io/python-client/api-guide/codecs/" target="_blank" rel="noopener">官方說明文件</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> codecs</span><br><span class="line">file = codecs.open(file_path, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure>
 
-<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">STR = <span class="string">'hello world!'</span></span><br><span class="line">STR.upper()             <span class="comment">#'HELLO WORLD!'</span></span><br><span class="line">STR.lower()             <span class="comment">#'hello world!'</span></span><br><span class="line"><span class="string">'#'</span>.join([<span class="string">'0'</span>,<span class="string">'1'</span>,<span class="string">'2'</span>]) <span class="comment">#'0#1#2'</span></span><br><span class="line"><span class="string">'0#1#2'</span>.split(<span class="string">'#'</span>)      <span class="comment">#['0','1','2']</span></span><br></pre></td></tr></table></figure>
+<h3 id="網頁相關"><a href="#網頁相關" class="headerlink" title="網頁相關"></a>網頁相關</h3><h4 id="requests"><a href="#requests" class="headerlink" title="requests"></a>requests</h4><figure class="highlight python"><figcaption><span>HTTP庫</span><a href="https://requests.readthedocs.io/en/master/" target="_blank" rel="noopener">官方說明文件</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">req_session = requests.session()</span><br><span class="line">req = requests.get(url),cookies=&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h4><figure class="highlight python"><figcaption><span>網頁解析</span><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank" rel="noopener">官方說明文件</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">soup = BeautifulSoup(req.text, <span class="string">'html.parser'</span>)<span class="comment">#解析網頁</span></span><br><span class="line">tag = soup.select(<span class="string">'.r-ent a'</span>)                <span class="comment">#搜尋目標</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="LINE-Notify"><a href="#LINE-Notify" class="headerlink" title="LINE Notify"></a>LINE Notify</h4><figure class="highlight python"><figcaption><span>LINE通知</span><a href="https://notify-bot.line.me/doc/en/" target="_blank" rel="noopener">官方說明文件</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">NotifyLineMessage</span><span class="params">(msg)</span>:</span></span><br><span class="line">    <span class="comment"># function docstring</span></span><br><span class="line">    line_notify_url = <span class="string">"https://notify-api.line.me/api/notify"</span></span><br><span class="line">    line_header = &#123;</span><br><span class="line">        <span class="string">"Authorization"</span>: <span class="string">"Bearer "</span> + token,</span><br><span class="line">        <span class="string">"Content-Type"</span>: <span class="string">"application/x-www-form-urlencoded"</span></span><br><span class="line">    &#125;</span><br><span class="line">    payload = &#123;<span class="string">'message'</span>: msg&#125;</span><br><span class="line">    req_line = requests.post(</span><br><span class="line">        line_notify_url, headers=line_header, params=payload)</span><br><span class="line">    <span class="keyword">return</span> req_line.status_code</span><br></pre></td></tr></table></figure>
+
+
+
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -184,19 +193,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/01/27/android/Android-0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Android-HelloWorld
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/21/python/python-basic/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/04/05/python/python-instagram/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Python 基礎</div>
+      <div class="article-nav-title">python-instagram</div>
     </a>
   
 </nav>
@@ -210,7 +210,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#多行字串"><span class="nav-number">1.</span> <span class="nav-text">多行字串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多行註解"><span class="nav-number">2.</span> <span class="nav-text">多行註解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#substr"><span class="nav-number">3.</span> <span class="nav-text">substr</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#in-not-in"><span class="nav-number">4.</span> <span class="nav-text">in, not in</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法"><span class="nav-number">5.</span> <span class="nav-text">方法</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安裝套件"><span class="nav-number">1.</span> <span class="nav-text">安裝套件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#檔案控制"><span class="nav-number">2.</span> <span class="nav-text">檔案控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#os"><span class="nav-number">2.1.</span> <span class="nav-text">os</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pyperclip"><span class="nav-number">2.2.</span> <span class="nav-text">pyperclip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#codecs"><span class="nav-number">2.3.</span> <span class="nav-text">codecs</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#網頁相關"><span class="nav-number">3.</span> <span class="nav-text">網頁相關</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#requests"><span class="nav-number">3.1.</span> <span class="nav-text">requests</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BeautifulSoup"><span class="nav-number">3.2.</span> <span class="nav-text">BeautifulSoup</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#LINE-Notify"><span class="nav-number">4.1.</span> <span class="nav-text">LINE Notify</span></a></li></ol></li></ol>
     
     </div>
   </aside>
