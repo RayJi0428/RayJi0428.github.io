@@ -11,16 +11,16 @@
   
   
   
-  <meta name="description" content="存取帳號密碼帳號密碼存在環境變數內，使用os模組存取帳號密碼，增加安全性 os官方說明文件1token = os.environ[&quot;KEY&quot;]#取得環境變數  爬蟲使用requests取得目標頁面 HTTP庫官方說明文件123import requestsreq_session = requests.session()req = requests.get(url),cookies=&amp;#123;&amp;#">
+  <meta name="description" content="爬蟲使用requests取得目標頁面 HTTP庫官方說明文件123import requestsreq_session = requests.session()req = requests.get(url),cookies=&amp;#123;&amp;#125;)  使用BeautifulSoup解析頁面內容 網頁解析官方說明文件123from bs4 import BeautifulSoupsoup = Be">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python專案(爬蟲 + LINE)">
 <meta property="og:url" content="https:&#x2F;&#x2F;rayji0428.github.io&#x2F;2020&#x2F;05&#x2F;01&#x2F;python&#x2F;python-ptt-dlsr&#x2F;python-ptt-dlsr&#x2F;index.html">
 <meta property="og:site_name" content="RayJi Blog">
-<meta property="og:description" content="存取帳號密碼帳號密碼存在環境變數內，使用os模組存取帳號密碼，增加安全性 os官方說明文件1token = os.environ[&quot;KEY&quot;]#取得環境變數  爬蟲使用requests取得目標頁面 HTTP庫官方說明文件123import requestsreq_session = requests.session()req = requests.get(url),cookies=&amp;#123;&amp;#">
+<meta property="og:description" content="爬蟲使用requests取得目標頁面 HTTP庫官方說明文件123import requestsreq_session = requests.session()req = requests.get(url),cookies=&amp;#123;&amp;#125;)  使用BeautifulSoup解析頁面內容 網頁解析官方說明文件123from bs4 import BeautifulSoupsoup = Be">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;rayji0428.github.io&#x2F;images&#x2F;python-ptt-dlsr_0.png">
-<meta property="og:updated_time" content="2020-05-01T06:39:59.826Z">
+<meta property="og:updated_time" content="2020-05-06T07:50:46.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;rayji0428.github.io&#x2F;images&#x2F;python-ptt-dlsr_0.png">
   
@@ -130,10 +130,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="存取帳號密碼"><a href="#存取帳號密碼" class="headerlink" title="存取帳號密碼"></a>存取帳號密碼</h4><p>帳號密碼存在環境變數內，使用os模組存取帳號密碼，增加安全性</p>
-<figure class="highlight python"><figcaption><span>os</span><a href="https://docs.python.org/3/library/os.html" target="_blank" rel="noopener">官方說明文件</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">token = os.environ[<span class="string">"KEY"</span>]<span class="comment">#取得環境變數</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="爬蟲"><a href="#爬蟲" class="headerlink" title="爬蟲"></a>爬蟲</h4><p>使用requests取得目標頁面</p>
+        <h4 id="爬蟲"><a href="#爬蟲" class="headerlink" title="爬蟲"></a>爬蟲</h4><p>使用requests取得目標頁面</p>
 <figure class="highlight python"><figcaption><span>HTTP庫</span><a href="https://requests.readthedocs.io/en/master/" target="_blank" rel="noopener">官方說明文件</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">req_session = requests.session()</span><br><span class="line">req = requests.get(url),cookies=&#123;&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>使用BeautifulSoup解析頁面內容</p>
@@ -209,7 +206,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#存取帳號密碼"><span class="nav-number">1.</span> <span class="nav-text">存取帳號密碼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#爬蟲"><span class="nav-number">2.</span> <span class="nav-text">爬蟲</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#發送LINE圖片"><span class="nav-number">3.</span> <span class="nav-text">發送LINE圖片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#帳號密碼"><span class="nav-number">4.</span> <span class="nav-text">帳號密碼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#資料比對"><span class="nav-number">5.</span> <span class="nav-text">資料比對</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#結語"><span class="nav-number">6.</span> <span class="nav-text">結語</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#爬蟲"><span class="nav-number">1.</span> <span class="nav-text">爬蟲</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#發送LINE圖片"><span class="nav-number">2.</span> <span class="nav-text">發送LINE圖片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#帳號密碼"><span class="nav-number">3.</span> <span class="nav-text">帳號密碼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#資料比對"><span class="nav-number">4.</span> <span class="nav-text">資料比對</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#結語"><span class="nav-number">5.</span> <span class="nav-text">結語</span></a></li></ol>
     
     </div>
   </aside>
